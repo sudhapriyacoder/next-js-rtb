@@ -1,13 +1,17 @@
+import styles from '../../styles/User.module.css';
+
 const UserPage = ( props) => {
-    console.log("props", props);
+    // console.log("props", props);
     return (
-        <div>
-            <h1> Users (SSR)</h1>
+        <div className={styles.pageContainer}>
+            <h1> Users (SSR - Server Side Rendering)</h1>
+            <div className={styles.parentDiv}>
             {props.data.users.map((user) => (
-                <li key = {user.id}>
+                <div key = {user.id} className={styles.userDiv}>
                  {user.firstName}
-                </li>
+                </div>
             ))}
+            </div>
         </div>
     );
 };

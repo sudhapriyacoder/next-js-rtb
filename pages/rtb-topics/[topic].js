@@ -17,7 +17,7 @@ const User = () => {
     <div>
       <h2>This is a dynamic route Page</h2>
       <h2> Dynamic route value - {query.topic}</h2>
-      <button onClick={(e) => router.push("/rtb-topics/user")}>User</button>
+      <button onClick={(e) => router.push("/rtb-topics/topic")}>Topic</button>
       <button onClick={(e) => router.push("/")}>Home</button>
     </div>
   );

@@ -1,0 +1,12 @@
+.parentDiv {
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 50%;
+}
+.userDiv {
+    padding: 1em 0.5em;
+    border-bottom: 1px solid grey;
+}
+.pageContainer {
+    margin: 2em 5em;
+}

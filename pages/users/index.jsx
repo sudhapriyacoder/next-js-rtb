@@ -1,6 +1,7 @@
 // import { useEffect, useState } from "react";
 import Link from "next/link";
 import useSWR from "swr";
+import styles from '../../styles/User.module.css';
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -14,14 +15,16 @@ const UserPage = () => {
   }
   if (data) {
     return (
-      <div>
-        <h1>Users</h1>
+      <div className={styles.pageContainer}>
+        <h1>Users (CSR - Client Side Rendering)</h1>
+        <div className={styles.parentDiv}>
         {data.users &&
           data.users.map((user) => (
             <Link href={`/users/${user.id}`} key={user.id}>
-              <div>{user.firstName}</div>
+              <div className={styles.userDiv}>{user.firstName}</div>
             </Link>
           ))}
+        </div>
       </div>
     );
   }
